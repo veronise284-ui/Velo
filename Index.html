@@ -3,87 +3,55 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Veronise Nyiragasigwa — Portfolio</title>
+  <title>Veronise Nyiragasigwa — Developer & Law Student</title>
 
-  <!-- Google Font -->
+  <!-- SEO -->
+  <meta name="description" content="Veronise Nyiragasigwa — Developer and law student. Projects in sustainable agriculture, digital learning, and UX. Available for admin, research, and web roles." />
+  <meta name="keywords" content="Veronise, portfolio, web developer, UX, agriculture, research, Rwanda" />
+  <meta name="author" content="Veronise Nyiragasigwa" />
+
+  <!-- OpenGraph (social preview) -->
+  <meta property="og:title" content="Veronise Nyiragasigwa — Portfolio" />
+  <meta property="og:description" content="Developer and law student building accessible, community-focused websites and tools." />
+  <meta property="og:type" content="website" />
+  <!-- replace with a shared image you export from Figma -->
+  <meta property="og:image" content="assets/og-image.jpg" />
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 
-  <!-- External CSS -->
+  <!-- favicon (add files to assets/) -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+
   <link rel="stylesheet" href="style.css">
-
-  <meta name="description" content="Portfolio website of Veronise Nyiragasigwa. Projects, skills, experience, education and contact." />
-
-  <!-- Small overrides: headings green, typing caret, reveal animation -->
-  <style>
-    :root {
-      --accent: #6ee7b7; /* green accent */
-    }
-
-    /* All main headings in green */
-    h1, h2 {
-      color: var(--accent) !important;
-    }
-
-    /* Animated lead text styling */
-    .lead-animated {
-      display:inline-block;
-      white-space:pre-wrap;
-      font-weight:500;
-      color:#e6eef6;
-      max-width:70ch;
-    }
-    .typed-caret {
-      display:inline-block;
-      width:3px;
-      background:var(--accent);
-      margin-left:6px;
-      animation: blink 0.9s steps(2, start) infinite;
-      vertical-align:bottom;
-      height:1.1em;
-      border-radius:2px;
-    }
-    @keyframes blink {
-      50% { opacity: 0; }
-      100% { opacity: 1; }
-    }
-
-    /* Reveal-on-scroll animation */
-    .reveal {
-      opacity:0;
-      transform:translateY(20px);
-      transition:opacity 0.6s ease-out, transform 0.6s ease-out;
-    }
-    .reveal.visible {
-      opacity:1;
-      transform:translateY(0);
-    }
-  </style>
 </head>
-
 <body>
   <div class="wrap">
 
-    <header>
+    <header class="site-header">
       <div class="brand">
         <div class="logo">NV</div>
         <div>
           <div class="full-name">Veronise Nyiragasigwa</div>
-          <div class="subtitle"> Developer </div>
+          <div class="subtitle">Law student • Developer • Project coordinator</div>
         </div>
       </div>
 
-      <nav class="main-nav">
+      <nav class="main-nav" aria-label="Primary">
         <a href="#about">About</a>
         <a href="#education">Education</a>
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
         <a href="#experience">Experience</a>
+        <a href="#blog">Blog</a>
         <a href="#contact">Contact</a>
       </nav>
+
+      <button class="mobile-menu-toggle" aria-expanded="false" aria-label="Open menu">☰</button>
     </header>
 
     <main>
-
       <!-- HERO -->
       <section class="hero reveal" id="home">
         <div class="hero-inner">
@@ -94,7 +62,7 @@
           <div class="intro">
             <h1>Hello — I'm Veronise</h1>
 
-            <!-- Animated lead text -->
+            <!-- animated lead text -->
             <p class="lead">
               <span id="animated-lead" class="lead-animated"></span>
               <span class="typed-caret" aria-hidden="true"></span>
@@ -108,21 +76,17 @@
         </div>
       </section>
 
-      <!-- 1. ABOUT -->
+      <!-- ABOUT -->
       <section id="about" class="section reveal" aria-labelledby="about-heading">
         <h2 id="about-heading">About Me</h2>
-        <p class="muted">
-           I’m a developer who loves turning ideas into digital experiences that genuinely help people. I focus on simple, clear interfaces, thoughtful design, and clean code. Every project is a chance to learn, improve, and create something meaningful.
-
-
-        </p>
+        <p class="muted">I’m a law student and developer with a background in administration, project coordination, and community innovation. I combine research-led problem solving with practical web development to deliver clear, usable solutions.</p>
 
         <div class="about-grid" style="margin-top:12px">
           <div>
             <strong>Quick facts</strong>
             <ul class="muted">
               <li>Diploma in Business Management</li>
-              <li>Member of NYP (Youth Professional Network)</li>
+              <li>Member of EBCR (Economics & Business Club Rwanda)</li>
               <li>Founder — Eco Artistry Creations</li>
             </ul>
           </div>
@@ -134,31 +98,27 @@
         </div>
       </section>
 
-      <!-- 2. EDUCATION -->
+      <!-- EDUCATION -->
       <section id="education" class="section reveal" aria-labelledby="education-heading">
         <h2 id="education-heading">Education</h2>
-
         <div class="education-list">
           <div class="education-item">
             <h3>Diploma in Business Management</h3>
-            <div class="place"><strong>DAVIS COLLEGE</strong></div>
-            <div class="date muted">Graduated 2023</div>
-            <p class="muted">Completed coursework in Social Change
-, entrepreneurship, and finance, Business operation,Human resource management
-,
-  Environmental Sustainability and project Management.</p>
+            <div class="place"><strong>University of Kigali</strong></div>
+            <div class="date muted">Graduated 2022</div>
+            <p class="muted">Coursework in administration, entrepreneurship, and finance.</p>
           </div>
 
           <div class="education-item" style="margin-top:12px">
             <h3>LLB (Ongoing)</h3>
             <div class="place"><strong>University of Kigali</strong></div>
-            <div class="date muted">2024 — Present</div>
-            <p class="muted">Studying criminal procedure, administrative law, and legal research alongside practical projects.</p>
+            <div class="date muted">2023 — Present</div>
+            <p class="muted">Studying criminal procedure, administrative law, and legal research.</p>
           </div>
         </div>
       </section>
 
-      <!-- 3. PROJECTS -->
+      <!-- PROJECTS -->
       <section id="projects" class="section reveal" aria-labelledby="projects-heading">
         <h2 id="projects-heading">Selected Projects</h2>
         <div class="projects">
@@ -172,20 +132,13 @@
           <article class="card">
             <div class="meta">Landing Page</div>
             <h3>Project Two</h3>
-            <p class="muted">Responsive landing page using clear communication and layout.</p>
+            <p class="muted">Responsive landing page using clear messaging.</p>
             <div class="tags"><span class="tag">HTML</span> <span class="tag">CSS</span></div>
-          </article>
-
-          <article class="card">
-            <div class="meta">Prototype</div>
-            <h3>Project Three</h3>
-            <p class="muted">Experimenting with UI structure and CSS Grid layout.</p>
-            <div class="tags"><span class="tag">CSS</span> <span class="tag">UX</span></div>
           </article>
         </div>
       </section>
 
-      <!-- 4. SKILLS -->
+      <!-- SKILLS -->
       <section id="skills" class="section reveal" aria-labelledby="skills-heading">
         <h2 id="skills-heading">Skills</h2>
         <div class="skills">
@@ -197,10 +150,9 @@
         </div>
       </section>
 
-      <!-- 5. EXPERIENCE -->
+      <!-- EXPERIENCE -->
       <section id="experience" class="section reveal" aria-labelledby="experience-heading">
         <h2 id="experience-heading">Experience</h2>
-
         <div class="timeline">
           <div class="timeline-item left">
             <div class="date">2024</div>
@@ -227,23 +179,10 @@
               </ul>
             </div>
           </div>
-
-          <div class="timeline-item left">
-            <div class="date">2023</div>
-            <div class="panel">
-              <h3>Founder, Eco Artistry Creations</h3>
-              <div class="place"><strong>Independent Project</strong></div>
-              <ul>
-                <li>Designed ornaments using recycled materials</li>
-                <li>Led workshops on reuse and sustainability</li>
-                <li>Presented work at local events</li>
-              </ul>
-            </div>
-          </div>
         </div>
       </section>
 
-      <!-- 6. CONTACT -->
+      <!-- CONTACT -->
       <section id="contact" class="section reveal" aria-labelledby="contact-heading">
         <h2 id="contact-heading">Contact</h2>
         <p class="muted">Want to collaborate or ask a question? Send a message.</p>
@@ -269,12 +208,12 @@
       <footer class="footer" style="margin-top:22px">
         Made with care • Open to opportunities in administration, research, and legal support.
       </footer>
-
     </main>
+
+    <!-- back to top -->
+    <button id="backToTop" title="Back to top" aria-label="Back to top">↑</button>
   </div>
 
-  <!-- Your JS file (now contains typing + animations) -->
   <script src="script.js"></script>
 </body>
 </html>
-
